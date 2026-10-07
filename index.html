@@ -1,6 +1,97 @@
 <!DOCTYPE html>
-<h1 style="font-family: Arial, Helvetica, sans-serif;text-align: center;">super tuff game site</h1>
-<a href="retrobowl">
-  <button type="button">Play Game</button>
-</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Tuff</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0d;
+      color: #f5f5f5;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+    }
+
+    .subtitle {
+      margin: 0 0 35px;
+      color: #888;
+      font-size: 16px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .game {
+      padding: 24px 15px;
+      background: #151518;
+      border: 1px solid #26262b;
+      border-radius: 10px;
+      color: #f5f5f5;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+    .game:hover {
+      background: #1c1c21;
+      border-color: #44444b;
+      transform: translateY(-2px);
+    }
+
+    .game:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 500px) {
+      .games {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <h1>Super Tuff</h1>
+    <p class="subtitle">Games</p>
+
+    <div class="games">
+      <a class="game" href="retrobowl">Retro Bowl</a>
+      <a class="game" href="btd5">Bloons TD 5</a>
+    </div>
+  </main>
+
+</body>
+</html>
